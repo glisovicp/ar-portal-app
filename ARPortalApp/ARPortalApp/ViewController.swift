@@ -29,7 +29,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Create a session configuration
+        // Create a session configuration. A configuration that monitors the iOS device's position and orientation while enabling you to augment the environment that's in front of the user.
         let configuration = ARWorldTrackingConfiguration()
 
         // Setting plane detection to horizontal so that we are able to detect horizontal planes
@@ -59,11 +59,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             if let hitResult = results.first {
                 
+                // Remove prevoiusly added nodes from scene
+                sceneView.scene.rootNode.enumerateChildNodes { (node, stop) in
+                    node.removeFromParentNode()
+                }
+                
                 let boxScene = SCNScene(named: "art.scnassets/portal.scn")!
                 
                 if let boxNode = boxScene.rootNode.childNode(withName: "portal", recursively: true) {
                     
-                    boxNode.position = SCNVector3(x: hitResult.worldTransform.columns.3.x, y: hitResult.worldTransform.columns.3.y + 0.15, z: hitResult.worldTransform.columns.3.z)
+                    boxNode.position = SCNVector3(x: hitResult.worldTransform.columns.3.x, y: hitResult.worldTransform.columns.3.y + 0.05, z: hitResult.worldTransform.columns.3.z)
                     
                     // finally the box is added to the scene
                     sceneView.scene.rootNode.addChildNode(boxNode)
