@@ -59,9 +59,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             if let hitResult = results.first {
                 
-                let boxScene = SCNScene(named: "art.scnassets/box.scn")
+                let boxScene = SCNScene(named: "art.scnassets/portal.scn")!
                 
-                if let boxNode = boxScene?.rootNode.childNode(withName: "box", recursively: true) {
+                if let boxNode = boxScene.rootNode.childNode(withName: "portal", recursively: true) {
                     
                     boxNode.position = SCNVector3(x: hitResult.worldTransform.columns.3.x, y: hitResult.worldTransform.columns.3.y + 0.15, z: hitResult.worldTransform.columns.3.z)
                     
