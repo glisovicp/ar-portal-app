@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FF53B4DD2396F81E0080B4F0 /* ARPortalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARPortalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF53B4DD2396F81E0080B4F0 /* ARPortal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARPortal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF53B4E02396F81E0080B4F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF53B4E22396F81E0080B4F0 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		FF53B4E42396F81E0080B4F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		FF53B4DE2396F81E0080B4F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF53B4DD2396F81E0080B4F0 /* ARPortalApp.app */,
+				FF53B4DD2396F81E0080B4F0 /* ARPortal.app */,
 				FF53B4F32396F8230080B4F0 /* ARPortalAppTests.xctest */,
 				FF53B4FE2396F8230080B4F0 /* ARPortalAppUITests.xctest */,
 			);
@@ -145,7 +145,7 @@
 			);
 			name = ARPortalApp;
 			productName = ARPortalApp;
-			productReference = FF53B4DD2396F81E0080B4F0 /* ARPortalApp.app */;
+			productReference = FF53B4DD2396F81E0080B4F0 /* ARPortal.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FF53B4F22396F8230080B4F0 /* ARPortalAppTests */ = {
@@ -434,15 +434,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V59HMNTZKA;
 				INFOPLIST_FILE = ARPortalApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = rs.petargl.ARPortalApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = rs.petargl.ARPortal;
+				PRODUCT_NAME = ARPortal;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,15 +455,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V59HMNTZKA;
 				INFOPLIST_FILE = ARPortalApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = rs.petargl.ARPortalApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = rs.petargl.ARPortal;
+				PRODUCT_NAME = ARPortal;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -64,14 +64,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                     node.removeFromParentNode()
                 }
                 
-                let boxScene = SCNScene(named: "art.scnassets/portal.scn")!
+                let portalScene = SCNScene(named: "art.scnassets/portal.scn")!
                 
-                if let boxNode = boxScene.rootNode.childNode(withName: "portal", recursively: true) {
+                if let portalNode = portalScene.rootNode.childNode(withName: "portal", recursively: true) {
                     
-                    boxNode.position = SCNVector3(x: hitResult.worldTransform.columns.3.x, y: hitResult.worldTransform.columns.3.y + 0.05, z: hitResult.worldTransform.columns.3.z)
+                    portalNode.position = SCNVector3(x: hitResult.worldTransform.columns.3.x, y: hitResult.worldTransform.columns.3.y + 0.05, z: hitResult.worldTransform.columns.3.z)
                     
                     // finally the box is added to the scene
-                    sceneView.scene.rootNode.addChildNode(boxNode)
+                    sceneView.scene.rootNode.addChildNode(portalNode)
                 }
             }
         }
